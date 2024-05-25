@@ -4,6 +4,8 @@
 
 body {
     background-color: black;
+    width: 100%;
+    height: 100%;
 }
 
 .description {
@@ -24,73 +26,117 @@ body {
     width: 300px;
     height: 300px;
     perspective: 500px;
-    perspective-origin: 50% 50%;
 }
 
 .cube {
     width: inherit;
     height: inherit;
     transform-style: preserve-3d;
+
 }
 
 .cube__side {
     position: absolute;
     width: inherit;
     height: inherit;
-    border: 5px solid #fff;
+    /* border: 5px solid #fff; */
     font: normal 70px Arial;
     text-align: center;
-    line-height: 300px;
-    color: #000000;
+    /* line-height: 300px; */
+    color: #fff;
+    transform: rotateY(0deg) translateZ(150px) rotateX(30deg);
+
 }
 
 .cube__side-front {
+    width: 100%;
+    height: 100%;
     border-left: 150px solid transparent;
-    border-bottom: 300px solid rgb(141, 112, 39);
+    border-bottom: 300px solid rgb(14, 209, 216);
     border-right: 150px solid transparent;
     border-top: none;
+    /* transform: rotateY(0deg) translateZ(150px) rotateX(30deg); */
     transform-origin: bottom;
-    transform:rotateY(0deg ) rotateX(30deg) translateZ(0px);
+    box-sizing: border-box;
+    /* position: absolute;
+    bottom: 0;
+    right: 0; */
+
+}
+
+.wrapper-cube-side__front {
+    width: 300px;
+    height: 300px;
+    transform: rotateY(0deg) translateZ(150px) rotateX(30deg);
+    transform-origin: bottom;
+}
+
+.cube__side-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.wrapper-cube-side__back {
+    width: 300px;
+    height: 300px;
+    transform: rotateY(180deg) translateZ(150px) rotateX(30deg);
+    transform-origin: bottom;
 }
 
 .cube__side-back {
     border-left: 150px solid transparent;
-    border-bottom: 300px solid rgb(68, 39, 141);
+    border-bottom: 300px solid rgb(248, 2, 162);
     border-right: 150px solid transparent;
-    border-top: none ;
-    perspective-origin: 0px 0px;
-    transform:rotateY(0deg ) rotateX(-30deg) translateZ(-270px);
+    border-top: none;
+}
 
+.wrapper-cube-side__right {
+    width: 300px;
+    height: 300px;
+    transform: rotateY(90deg) translateZ(150px) rotateX(30deg);
+    transform-origin: bottom;
 }
 
 
 .cube__side-right {
     border-left: 150px solid transparent;
-    border-bottom: 300px solid white;
+    border-bottom: 300px solid rgb(5, 25, 246);
     border-right: 150px solid transparent;
     border-top: none;
-    transform-origin: bottom right;
-    transform: rotateY(-90deg ) rotateX(-30deg) translateZ(0px);
+}
+
+.wrapper-cube-side__left {
+    width: 300px;
+    height: 300px;
+    transform: rotateY(-90deg) translateZ(150px) rotateX(30deg);
+    transform-origin: bottom;
+
 }
 
 .cube__side-left {
     border-left: 150px solid transparent;
-    border-bottom: 300px solid rgb(68, 100, 61);
+    border-bottom: 300px solid rgb(24, 242, 0);
     border-right: 150px solid transparent;
     border-top: none;
-    transform-origin: bottom left;
-    transform: rotateY(90deg) rotateX(-30deg) translateZ(0px);
 }
 
-.cube__side-top {
-    transform: rotateX(90deg) translateZ(150px);
+.wrapper-cube-side__bottom {
+    width: 300px;
+    height: 300px;
+    transform: rotateY(0deg) translateZ(150px) rotateX(90deg);
+    transform-origin: bottom;
+    background-color: rgb(255, 0, 0);
 }
 
 .cube__side-bottom {
-    background-color: rgb(121, 85, 85);
-    transform-origin: bottom;
-    transform: rotateX(90deg) rotateY(0deg)  translateZ(0px);
 }
 
-
-
+.cube__side-text__bottom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
